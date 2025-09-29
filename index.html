@@ -40,9 +40,14 @@
 
       <section id="customers" class="panel active">
         <header class="panel-header">
-          <div>
-            <h2>Customers</h2>
-            <p>Browse collectors, their interests, and recent sales activity.</p>
+          <div class="panel-heading">
+            <div>
+              <h2>Customers</h2>
+              <p>Browse collectors, their interests, and recent sales activity.</p>
+            </div>
+            <div class="panel-actions">
+              <button class="pill-button" id="add-customer" type="button">Add Customer</button>
+            </div>
           </div>
           <div class="filters">
             <label>
@@ -82,17 +87,30 @@
             </table>
           </div>
           <aside class="detail" id="customer-detail">
-            <h3>Customer Details</h3>
-            <p>Select a customer to view their profile and sales notes.</p>
+            <div class="detail-header">
+              <div>
+                <h3>Customer Details</h3>
+                <p>Select a customer to view their profile and sales notes.</p>
+              </div>
+              <div class="detail-actions" hidden>
+                <button class="pill-button subtle" type="button" data-edit="customer">Edit</button>
+                <button class="pill-button danger" type="button" data-delete="customer">Delete</button>
+              </div>
+            </div>
           </aside>
         </div>
       </section>
 
       <section id="artworks" class="panel">
         <header class="panel-header">
-          <div>
-            <h2>Artworks</h2>
-            <p>Review available inventory, pricing, and keyword metadata.</p>
+          <div class="panel-heading">
+            <div>
+              <h2>Artworks</h2>
+              <p>Review available inventory, pricing, and keyword metadata.</p>
+            </div>
+            <div class="panel-actions">
+              <button class="pill-button" id="add-artwork" type="button">Add Artwork</button>
+            </div>
           </div>
           <div class="filters">
             <label>
@@ -132,8 +150,16 @@
             </table>
           </div>
           <aside class="detail" id="artwork-detail">
-            <h3>Artwork Details</h3>
-            <p>Select an artwork to view extended metadata and collector interest.</p>
+            <div class="detail-header">
+              <div>
+                <h3>Artwork Details</h3>
+                <p>Select an artwork to view extended metadata and collector interest.</p>
+              </div>
+              <div class="detail-actions" hidden>
+                <button class="pill-button subtle" type="button" data-edit="artwork">Edit</button>
+                <button class="pill-button danger" type="button" data-delete="artwork">Delete</button>
+              </div>
+            </div>
           </aside>
         </div>
       </section>
@@ -142,6 +168,23 @@
     <footer class="page-footer">
       <p>Mock dashboard generated for gallery planning exercises. Data is synthetic.</p>
     </footer>
+
+    <dialog id="form-dialog">
+      <form id="entity-form">
+        <div class="form-header">
+          <h3 id="form-title">Edit</h3>
+          <button class="icon-button" type="button" data-action="close" aria-label="Close dialog">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <p class="form-subtitle" id="form-subtitle"></p>
+        <div id="form-fields" class="form-grid"></div>
+        <div class="form-actions">
+          <button class="pill-button subtle" type="button" data-action="cancel">Cancel</button>
+          <button class="pill-button" type="submit">Save</button>
+        </div>
+      </form>
+    </dialog>
 
     <script type="module" src="assets/app.js"></script>
   </body>
