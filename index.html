@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery CRM &amp; Inventory Dashboard</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <div>
+        <h1>Gallery CRM &amp; Inventory Dashboard</h1>
+        <p class="subtitle">Mock data set showcasing 100 customers and 100 artworks for planning and prototyping.</p>
+      </div>
+      <div class="header-actions">
+        <button class="toggle" data-target="customers">Customers</button>
+        <button class="toggle" data-target="artworks">Artworks</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="summary">
+        <article class="summary-card">
+          <h2>Total Customers</h2>
+          <p id="customer-count">0</p>
+        </article>
+        <article class="summary-card">
+          <h2>Total Artworks</h2>
+          <p id="artwork-count">0</p>
+        </article>
+        <article class="summary-card">
+          <h2>Top Medium</h2>
+          <p id="top-medium">&mdash;</p>
+        </article>
+        <article class="summary-card">
+          <h2>Top Interest</h2>
+          <p id="top-interest">&mdash;</p>
+        </article>
+      </section>
+
+      <section id="customers" class="panel active">
+        <header class="panel-header">
+          <div>
+            <h2>Customers</h2>
+            <p>Browse collectors, their interests, and recent sales activity.</p>
+          </div>
+          <div class="filters">
+            <label>
+              <span>Search</span>
+              <input type="search" id="customer-search" placeholder="Search name, city, tags, interests" />
+            </label>
+            <label>
+              <span>Status</span>
+              <select id="customer-status">
+                <option value="all">All</option>
+              </select>
+            </label>
+            <label>
+              <span>Tag</span>
+              <select id="customer-tag">
+                <option value="all">All</option>
+              </select>
+            </label>
+          </div>
+        </header>
+        <div class="panel-body">
+          <div class="table-wrapper">
+            <table id="customer-table">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th>Contact</th>
+                  <th>Location</th>
+                  <th>Interests</th>
+                  <th>Tags</th>
+                  <th>Last Contacted</th>
+                  <th>Total Spend</th>
+                  <th>Sales</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <aside class="detail" id="customer-detail">
+            <h3>Customer Details</h3>
+            <p>Select a customer to view their profile and sales notes.</p>
+          </aside>
+        </div>
+      </section>
+
+      <section id="artworks" class="panel">
+        <header class="panel-header">
+          <div>
+            <h2>Artworks</h2>
+            <p>Review available inventory, pricing, and keyword metadata.</p>
+          </div>
+          <div class="filters">
+            <label>
+              <span>Search</span>
+              <input type="search" id="artwork-search" placeholder="Search title, artist, keywords" />
+            </label>
+            <label>
+              <span>Availability</span>
+              <select id="artwork-availability">
+                <option value="all">All</option>
+              </select>
+            </label>
+            <label>
+              <span>Medium</span>
+              <select id="artwork-medium">
+                <option value="all">All</option>
+              </select>
+            </label>
+          </div>
+        </header>
+        <div class="panel-body">
+          <div class="table-wrapper">
+            <table id="artwork-table">
+              <thead>
+                <tr>
+                  <th>Title</th>
+                  <th>Artist</th>
+                  <th>Year</th>
+                  <th>Medium</th>
+                  <th>Price</th>
+                  <th>Location</th>
+                  <th>Keywords</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <aside class="detail" id="artwork-detail">
+            <h3>Artwork Details</h3>
+            <p>Select an artwork to view extended metadata and collector interest.</p>
+          </aside>
+        </div>
+      </section>
+    </main>
+
+    <footer class="page-footer">
+      <p>Mock dashboard generated for gallery planning exercises. Data is synthetic.</p>
+    </footer>
+
+    <script type="module" src="assets/app.js"></script>
+  </body>
+</html>
