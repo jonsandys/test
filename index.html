@@ -3,189 +3,95 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gallery CRM &amp; Inventory Dashboard</title>
+    <title>Starlight Scoop Idle</title>
     <link rel="stylesheet" href="assets/styles.css" />
   </head>
   <body>
-    <header class="page-header">
-      <div>
-        <h1>Gallery CRM &amp; Inventory Dashboard</h1>
-        <p class="subtitle">Mock data set showcasing 100 customers and 100 artworks for planning and prototyping.</p>
-      </div>
-      <div class="header-actions">
-        <button class="toggle" data-target="customers">Customers</button>
-        <button class="toggle" data-target="artworks">Artworks</button>
-      </div>
-    </header>
-
-    <main>
-      <section class="summary">
-        <article class="summary-card">
-          <h2>Total Customers</h2>
-          <p id="customer-count">0</p>
-        </article>
-        <article class="summary-card">
-          <h2>Total Artworks</h2>
-          <p id="artwork-count">0</p>
-        </article>
-        <article class="summary-card">
-          <h2>Top Medium</h2>
-          <p id="top-medium">&mdash;</p>
-        </article>
-        <article class="summary-card">
-          <h2>Top Interest</h2>
-          <p id="top-interest">&mdash;</p>
-        </article>
-      </section>
-
-      <section id="customers" class="panel active">
-        <header class="panel-header">
-          <div class="panel-heading">
-            <div>
-              <h2>Customers</h2>
-              <p>Browse collectors, their interests, and recent sales activity.</p>
-            </div>
-            <div class="panel-actions">
-              <button class="pill-button" id="add-customer" type="button">Add Customer</button>
-            </div>
-          </div>
-          <div class="filters">
-            <label>
-              <span>Search</span>
-              <input type="search" id="customer-search" placeholder="Search name, city, tags, interests" />
-            </label>
-            <label>
-              <span>Status</span>
-              <select id="customer-status">
-                <option value="all">All</option>
-              </select>
-            </label>
-            <label>
-              <span>Tag</span>
-              <select id="customer-tag">
-                <option value="all">All</option>
-              </select>
-            </label>
-          </div>
-        </header>
-        <div class="panel-body">
-          <div class="table-wrapper">
-            <table id="customer-table">
-              <thead>
-                <tr>
-                  <th>Name</th>
-                  <th>Contact</th>
-                  <th>Location</th>
-                  <th>Interests</th>
-                  <th>Tags</th>
-                  <th>Last Contacted</th>
-                  <th>Total Spend</th>
-                  <th>Sales</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
-          </div>
-          <aside class="detail" id="customer-detail">
-            <div class="detail-header">
-              <div>
-                <h3>Customer Details</h3>
-                <p>Select a customer to view their profile and sales notes.</p>
-              </div>
-              <div class="detail-actions" hidden>
-                <button class="pill-button subtle" type="button" data-edit="customer">Edit</button>
-                <button class="pill-button danger" type="button" data-delete="customer">Delete</button>
-              </div>
-            </div>
-          </aside>
+    <div class="app">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Idle Game</p>
+          <h1>Starlight Scoop Idle</h1>
+          <p class="subtitle">
+            Pilot your cosmic ice-cream cart, scoop stardust, and automate the galaxy's chillest dessert empire.
+          </p>
         </div>
-      </section>
-
-      <section id="artworks" class="panel">
-        <header class="panel-header">
-          <div class="panel-heading">
-            <div>
-              <h2>Artworks</h2>
-              <p>Review available inventory, pricing, and keyword metadata.</p>
-            </div>
-            <div class="panel-actions">
-              <button class="pill-button" id="add-artwork" type="button">Add Artwork</button>
-            </div>
-          </div>
-          <div class="filters">
-            <label>
-              <span>Search</span>
-              <input type="search" id="artwork-search" placeholder="Search title, artist, keywords" />
-            </label>
-            <label>
-              <span>Availability</span>
-              <select id="artwork-availability">
-                <option value="all">All</option>
-              </select>
-            </label>
-            <label>
-              <span>Medium</span>
-              <select id="artwork-medium">
-                <option value="all">All</option>
-              </select>
-            </label>
-          </div>
-        </header>
-        <div class="panel-body">
-          <div class="table-wrapper">
-            <table id="artwork-table">
-              <thead>
-                <tr>
-                  <th>Title</th>
-                  <th>Artist</th>
-                  <th>Year</th>
-                  <th>Medium</th>
-                  <th>Price</th>
-                  <th>Location</th>
-                  <th>Keywords</th>
-                  <th>Status</th>
-                </tr>
-              </thead>
-              <tbody></tbody>
-            </table>
-          </div>
-          <aside class="detail" id="artwork-detail">
-            <div class="detail-header">
-              <div>
-                <h3>Artwork Details</h3>
-                <p>Select an artwork to view extended metadata and collector interest.</p>
-              </div>
-              <div class="detail-actions" hidden>
-                <button class="pill-button subtle" type="button" data-edit="artwork">Edit</button>
-                <button class="pill-button danger" type="button" data-delete="artwork">Delete</button>
-              </div>
-            </div>
-          </aside>
+        <div class="hero-card">
+          <h2>Captain's Log</h2>
+          <p id="log-line">Welcome back, captain. The universe is hungry.</p>
         </div>
-      </section>
-    </main>
+      </header>
 
-    <footer class="page-footer">
-      <p>Mock dashboard generated for gallery planning exercises. Data is synthetic.</p>
-    </footer>
+      <main class="layout">
+        <section class="panel stats">
+          <h2>Galaxy Stats</h2>
+          <div class="stat-grid">
+            <div class="stat-card">
+              <span class="stat-label">Stardust</span>
+              <strong id="stardust-count">0</strong>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Scoops / click</span>
+              <strong id="per-click">1</strong>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Scoops / sec</span>
+              <strong id="per-second">0</strong>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label">Crew Mood</span>
+              <strong id="crew-mood">Peppy</strong>
+            </div>
+          </div>
+          <div class="progress">
+            <div>
+              <span>Next Milestone</span>
+              <strong id="milestone">Sell 100 scoops</strong>
+            </div>
+            <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+              <span id="milestone-bar"></span>
+            </div>
+          </div>
+        </section>
 
-    <dialog id="form-dialog">
-      <form id="entity-form">
-        <div class="form-header">
-          <h3 id="form-title">Edit</h3>
-          <button class="icon-button" type="button" data-action="close" aria-label="Close dialog">
-            <span aria-hidden="true">&times;</span>
+        <section class="panel actions">
+          <h2>Manual Scooping</h2>
+          <p>Tap the scoop to collect extra stardust. Your crew cheers every time you serve a galaxy.</p>
+          <button id="scoop-button" class="scoop-button" type="button">
+            <span aria-hidden="true">🍨</span>
+            Scoop Starlight
           </button>
-        </div>
-        <p class="form-subtitle" id="form-subtitle"></p>
-        <div id="form-fields" class="form-grid"></div>
-        <div class="form-actions">
-          <button class="pill-button subtle" type="button" data-action="cancel">Cancel</button>
-          <button class="pill-button" type="submit">Save</button>
-        </div>
-      </form>
-    </dialog>
+          <div class="boosts">
+            <button id="boost-button" class="ghost-button" type="button">Activate Sugar Rush</button>
+            <div class="boost-details">
+              <span id="boost-status">Boost ready</span>
+              <span id="boost-timer">00:00</span>
+            </div>
+          </div>
+        </section>
 
-    <script type="module" src="assets/app.js"></script>
+        <section class="panel upgrades">
+          <div class="panel-header">
+            <div>
+              <h2>Upgrades &amp; Crew</h2>
+              <p>Hire helpers, upgrade gear, and unlock automated scooping.</p>
+            </div>
+            <button id="reset-button" class="ghost-button" type="button">Reset Run</button>
+          </div>
+          <div id="upgrade-list" class="upgrade-grid"></div>
+        </section>
+
+        <section class="panel sidebar">
+          <h2>Flavor Board</h2>
+          <ul id="flavor-list" class="flavor-list"></ul>
+          <div class="tip-box">
+            <h3>Tip Jar</h3>
+            <p>Spend stardust to unlock playful boosts. Each upgrade improves your idle output.</p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="assets/app.js"></script>
   </body>
 </html>
